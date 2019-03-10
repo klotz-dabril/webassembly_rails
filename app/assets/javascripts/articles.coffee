@@ -4,9 +4,14 @@
 #
 #
 ready = ->
-    Module.onRuntimeInitialized =  ->
-      api = { fib: Module.cwrap('fib', 'number', ['number']) }
-      console.log(api.fib(12))
+  Fib().then (le) ->
+    api = { fib: le.cwrap('fib', 'number', ['number']) }
+    console.log(api.fib(12))
+
+
+  # Module.onRuntimeInitialized =  ->
+    # api = { fib: Module.cwrap('fib', 'number', ['number']) }
+    # console.log(api.fib(12))
 
 
 
