@@ -4,14 +4,19 @@
 #
 #
 ready = ->
-  Fib().then (le) ->
-    api = { fib: le.cwrap('fib', 'number', ['number']) }
-    console.log(api.fib(12))
+  Fib().then (module) ->
+    fib = new module.Fib(11)
+    console.log("Constructor: " + fib)
 
+    console.log("Calling instance method: " + fib.next())
 
-  # Module.onRuntimeInitialized =  ->
-    # api = { fib: Module.cwrap('fib', 'number', ['number']) }
-    # console.log(api.fib(12))
+    fib.x = 6
+    console.log("Setting and getting property x: " + fib.x)
+
+    console.log("Calling a class method: " + module.Fib.calculate(1))
+
+    fib.hello()
+
 
 
 

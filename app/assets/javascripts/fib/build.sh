@@ -3,13 +3,11 @@
 # build.sh
 #
 #
-
-
-emcc \
+em++ \
 	-O0 \
 	-s WASM=1 \
-	-s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
-	-o fib.js \
+	--bind \
 	-s MODULARIZE=1 -s 'EXPORT_NAME="Fib"' \
-	fib.c
+	-o fib.js \
+	fib.cpp
 
