@@ -9,5 +9,5 @@ running on the client side and interacting with javascript.
 The compilation is done by the build.sh script inside the
 app/assets/javascripts/fib folder.
 
-The c++ code exports a class called Fib with a constructor, instance
+The c++ code exports a class with a constructor, instance
 methods, properties and a class method.
