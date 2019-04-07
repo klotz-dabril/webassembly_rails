@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Exploration with webassembly inside a rails app.
 
-Things you may want to cover:
 
-* Ruby version
+The example shows the connection of c++ objects compiled with emscripten
+running on the client side and interacting with javascript.
 
-* System dependencies
+The compilation is done by the build.sh script inside the
+app/assets/javascripts/fib folder.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The c++ code exports a class called Fib with a constructor, instance
+methods, properties and a class method.
